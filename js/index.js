@@ -22,7 +22,8 @@ function createPayment() {
         steem.api.getAccounts([new_account], function (err, result) {
             if (result.length == 0) {
                 var steemconnectlink = "https://steemconnect.com/sign/transfer?from=" + paymentFrom + "&to=touhidalam69&amount=4.000 STEEM&memo=" + new_account + "/" + emailId;
-                window.location.replace(steemconnectlink);
+               // window.location.replace(steemconnectlink);
+               window.open(steemconnectlink, '_blank');
             } else {
                 alert('account already exists');
                 $('#userName').focus();
